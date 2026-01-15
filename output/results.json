@@ -1,0 +1,118 @@
+{
+  "iteration": 1,
+  "preprocessing": "medium",
+  "results": [
+    {
+      "image_name": "Not Russian.jpeg",
+      "plates_detected": 1,
+      "plates": [
+        {
+          "bbox": [
+            289,
+            315,
+            133,
+            44
+          ],
+          "aspect_ratio": 3.022727272727273,
+          "rotation_angle": 9.0,
+          "recognized_text": "NNHR26BM8271",
+          "num_characters": 0,
+          "format_valid": false,
+          "formatted_text": "NNHR26BM8271"
+        }
+      ],
+      "processing_time": 0.45132994651794434
+    },
+    {
+      "image_name": "Russia Far.png",
+      "plates_detected": 2,
+      "plates": [
+        {
+          "bbox": [
+            506,
+            329,
+            69,
+            23
+          ],
+          "aspect_ratio": 3.0,
+          "rotation_angle": -1.5000038146972656,
+          "recognized_text": "32707",
+          "num_characters": 1,
+          "format_valid": false,
+          "formatted_text": "32707",
+          "avg_confidence": 0.14
+        },
+        {
+          "bbox": [
+            702,
+            331,
+            73,
+            24
+          ],
+          "aspect_ratio": 3.0416666666666665,
+          "rotation_angle": -1.0,
+          "recognized_text": "NO_TEXT_DETECTED",
+          "num_characters": 0,
+          "format_valid": false,
+          "formatted_text": "NO_TEXT_DETECTED"
+        }
+      ],
+      "processing_time": 0.7453980445861816
+    },
+    {
+      "image_name": "Russia close.jpg",
+      "plates_detected": 1,
+      "plates": [
+        {
+          "bbox": [
+            297,
+            266,
+            185,
+            62
+          ],
+          "aspect_ratio": 2.9838709677419355,
+          "rotation_angle": -1.0,
+          "recognized_text": "00T77",
+          "num_characters": 0,
+          "format_valid": false,
+          "formatted_text": "00T77"
+        }
+      ],
+      "processing_time": 0.3755910396575928
+    }
+  ],
+  "log": [
+    "[2025-11-01 18:09:32] \n============================================================",
+    "[2025-11-01 18:09:32] Processing: Not Russian.jpeg",
+    "[2025-11-01 18:09:32] ============================================================",
+    "[2025-11-01 18:09:32] Loading image: Not Russian.jpeg",
+    "[2025-11-01 18:09:32] Detecting plates with params: {'scaleFactor': 1.1, 'minNeighbors': 3, 'minSize': (30, 10)}",
+    "[2025-11-01 18:09:32] Initial detections: 1",
+    "[2025-11-01 18:09:32] Valid detections after filtering: 1",
+    "[2025-11-01 18:09:32] \nProcessing plate 1/1",
+    "[2025-11-01 18:09:33] Recognized: NNHR26BM8271",
+    "[2025-11-01 18:09:33] Processing completed in 0.45s",
+    "[2025-11-01 18:09:33] \n============================================================",
+    "[2025-11-01 18:09:33] Processing: Russia Far.png",
+    "[2025-11-01 18:09:33] ============================================================",
+    "[2025-11-01 18:09:33] Loading image: Russia Far.png",
+    "[2025-11-01 18:09:33] Detecting plates with params: {'scaleFactor': 1.1, 'minNeighbors': 3, 'minSize': (30, 10)}",
+    "[2025-11-01 18:09:33] Initial detections: 2",
+    "[2025-11-01 18:09:33] Valid detections after filtering: 2",
+    "[2025-11-01 18:09:33] \nProcessing plate 1/2",
+    "[2025-11-01 18:09:33] Recognized: 32707",
+    "[2025-11-01 18:09:33] \nProcessing plate 2/2",
+    "[2025-11-01 18:09:34] Recognized: NO_TEXT_DETECTED",
+    "[2025-11-01 18:09:34] Processing completed in 0.75s",
+    "[2025-11-01 18:09:34] \n============================================================",
+    "[2025-11-01 18:09:34] Processing: Russia close.jpg",
+    "[2025-11-01 18:09:34] ============================================================",
+    "[2025-11-01 18:09:34] Loading image: Russia close.jpg",
+    "[2025-11-01 18:09:34] Detecting plates with params: {'scaleFactor': 1.1, 'minNeighbors': 3, 'minSize': (30, 10)}",
+    "[2025-11-01 18:09:34] Initial detections: 1",
+    "[2025-11-01 18:09:34] Valid detections after filtering: 1",
+    "[2025-11-01 18:09:34] \nProcessing plate 1/1",
+    "[2025-11-01 18:09:34] Recognized: 00T77",
+    "[2025-11-01 18:09:34] Processing completed in 0.38s"
+  ]
+}

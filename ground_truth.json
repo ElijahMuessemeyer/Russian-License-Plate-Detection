@@ -1,0 +1,34 @@
+{
+  "Russia close.jpg": {
+    "plates": [
+      {
+        "plate_number": "P001AM77",
+        "position": "rear",
+        "notes": "Clear Russian plate on white Bentley"
+      }
+    ]
+  },
+  "Russia Far.png": {
+    "plates": [
+      {
+        "plate_number": "H126EK178",
+        "position": "front",
+        "notes": "Light blue car on left, partially visible"
+      },
+      {
+        "plate_number": "K327HI78",
+        "position": "front",
+        "notes": "Blue car in center, more visible"
+      }
+    ]
+  },
+  "Not Russian.jpeg": {
+    "plates": [
+      {
+        "plate_number": "HR26BM8271",
+        "position": "front",
+        "notes": "Indian plate - should be rejected by system"
+      }
+    ]
+  }
+}

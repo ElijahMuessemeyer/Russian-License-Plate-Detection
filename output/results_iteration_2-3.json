@@ -1,0 +1,230 @@
+{
+  "iteration": "2-3",
+  "description": "Improved detection filtering + enhanced OCR preprocessing",
+  "changes": {
+    "detection": {
+      "scaleFactor": 1.05,
+      "minNeighbors": 5,
+      "minSize": [
+        40,
+        12
+      ],
+      "aspect_ratio_range": [
+        2.5,
+        4.5
+      ],
+      "color_validation": true,
+      "position_heuristics": true
+    },
+    "ocr_preprocessing": {
+      "adaptive_upscaling": "3-6x based on size",
+      "denoising": "fastNlMeans",
+      "sharpening": true,
+      "multiple_thresholding": true
+    },
+    "character_correction": {
+      "position_based": true,
+      "corrections": "O<->0, I<->1, B<->8, etc."
+    }
+  },
+  "results": [
+    {
+      "image_name": "Not Russian.jpeg",
+      "plates_detected": 0,
+      "plates": [],
+      "processing_time": 0.07881593704223633,
+      "ground_truth_validation": {
+        "has_ground_truth": true,
+        "expected_count": 1,
+        "detected_count": 0,
+        "plate_accuracies": [
+          {
+            "ground_truth": "HR26BM8271",
+            "recognized": "NOT_DETECTED",
+            "accuracy": 0.0,
+            "position": "front",
+            "notes": "Indian plate - should be rejected by system"
+          }
+        ],
+        "average_accuracy": 0.0
+      }
+    },
+    {
+      "image_name": "Russia Far.png",
+      "plates_detected": 2,
+      "plates": [
+        {
+          "bbox": [
+            699,
+            330,
+            79,
+            26
+          ],
+          "aspect_ratio": 3.0384615384615383,
+          "rotation_angle": -1.5000038146972656,
+          "recognized_text": "LY798KH983",
+          "ocr_method": "easyocr",
+          "num_characters": 1,
+          "format_valid": false,
+          "formatted_text": "LY798KH983",
+          "avg_confidence": 0.4778130402641867,
+          "min_confidence": 0.4778130402641867,
+          "max_confidence": 0.4778130402641867
+        },
+        {
+          "bbox": [
+            505,
+            329,
+            70,
+            23
+          ],
+          "aspect_ratio": 3.0434782608695654,
+          "rotation_angle": -1.5000038146972656,
+          "recognized_text": "C3274HB",
+          "ocr_method": "easyocr",
+          "num_characters": 1,
+          "format_valid": false,
+          "formatted_text": "C3274HB",
+          "avg_confidence": 0.07307262564696208,
+          "min_confidence": 0.07307262564696208,
+          "max_confidence": 0.07307262564696208
+        }
+      ],
+      "processing_time": 1.5002799034118652,
+      "ground_truth_validation": {
+        "has_ground_truth": true,
+        "expected_count": 2,
+        "detected_count": 2,
+        "plate_accuracies": [
+          {
+            "ground_truth": "H126EK178",
+            "recognized": "LY798KH983",
+            "accuracy": 0.2,
+            "position": "front",
+            "notes": "Light blue car on left, partially visible"
+          },
+          {
+            "ground_truth": "K327HI78",
+            "recognized": "C3274HB",
+            "accuracy": 0.375,
+            "position": "front",
+            "notes": "Blue car in center, more visible"
+          }
+        ],
+        "average_accuracy": 0.2875
+      }
+    },
+    {
+      "image_name": "Russia close.jpg",
+      "plates_detected": 1,
+      "plates": [
+        {
+          "bbox": [
+            296,
+            266,
+            184,
+            62
+          ],
+          "aspect_ratio": 2.967741935483871,
+          "rotation_angle": -1.0,
+          "recognized_text": "POOAAM",
+          "ocr_method": "easyocr",
+          "num_characters": 1,
+          "format_valid": false,
+          "formatted_text": "POOAAM",
+          "avg_confidence": 0.8312469356882852,
+          "min_confidence": 0.8312469356882852,
+          "max_confidence": 0.8312469356882852
+        }
+      ],
+      "processing_time": 0.10050296783447266,
+      "ground_truth_validation": {
+        "has_ground_truth": true,
+        "expected_count": 1,
+        "detected_count": 1,
+        "plate_accuracies": [
+          {
+            "ground_truth": "P001AM77",
+            "recognized": "POOAAM",
+            "accuracy": 0.375,
+            "position": "rear",
+            "notes": "Clear Russian plate on white Bentley"
+          }
+        ],
+        "average_accuracy": 0.375
+      }
+    }
+  ],
+  "log": [
+    "[2025-11-02 11:43:03] \n============================================================",
+    "[2025-11-02 11:43:03] Processing: Not Russian.jpeg",
+    "[2025-11-02 11:43:03] ============================================================",
+    "[2025-11-02 11:43:03] Loading image: Not Russian.jpeg",
+    "[2025-11-02 11:43:03] Detecting plates with params: {'scaleFactor': 1.05, 'minNeighbors': 5, 'minSize': (40, 12)}",
+    "[2025-11-02 11:43:03] Initial detections: 1",
+    "[2025-11-02 11:43:03] Color check: bright_ratio=0.08 < 0.25",
+    "[2025-11-02 11:43:03] Rejected: color validation failed",
+    "[2025-11-02 11:43:03] Detection 1 REJECTED: bbox=[288,315,134,45], aspect=2.98",
+    "[2025-11-02 11:43:03] Valid detections after filtering: 0",
+    "[2025-11-02 11:43:03] WARNING: No plates detected!",
+    "[2025-11-02 11:43:03] Saved: /Users/eli/final project/output/annotated_originals/Not Russian.jpeg_no_detection.jpg",
+    "[2025-11-02 11:43:03] Saved: /Users/eli/final project/output/annotated_originals/Not Russian.jpeg_processed.jpg",
+    "[2025-11-02 11:43:03] Saved metadata: /Users/eli/final project/output/annotated_originals/metadata.json",
+    "[2025-11-02 11:43:03] \n============================================================",
+    "[2025-11-02 11:43:03] Processing: Russia Far.png",
+    "[2025-11-02 11:43:03] ============================================================",
+    "[2025-11-02 11:43:03] Loading image: Russia Far.png",
+    "[2025-11-02 11:43:03] Detecting plates with params: {'scaleFactor': 1.05, 'minNeighbors': 5, 'minSize': (40, 12)}",
+    "[2025-11-02 11:43:03] Initial detections: 3",
+    "[2025-11-02 11:43:03] Rejected: position too high (y=109 < 135)",
+    "[2025-11-02 11:43:03] Detection 1 REJECTED: bbox=[45,109,91,30], aspect=3.03",
+    "[2025-11-02 11:43:03] Color check passed: bright=0.49, low_sat=0.65",
+    "[2025-11-02 11:43:03] Detection 2 ACCEPTED: bbox=[699,330,79,26], aspect=3.04",
+    "[2025-11-02 11:43:03] Color check passed: bright=0.31, low_sat=1.00",
+    "[2025-11-02 11:43:03] Detection 3 ACCEPTED: bbox=[505,329,70,23], aspect=3.04",
+    "[2025-11-02 11:43:03] Valid detections after filtering: 2",
+    "[2025-11-02 11:43:03] \nProcessing plate 1/2",
+    "[2025-11-02 11:43:03] Plate size: 89x36, upscaling by 5x",
+    "[2025-11-02 11:43:03] Running ensemble OCR (Tesseract + EasyOCR)...",
+    "[2025-11-02 11:43:03] Character segmentation: found 0 candidates",
+    "[2025-11-02 11:43:03] WARNING: Unusual character count: 0",
+    "[2025-11-02 11:43:03] No characters segmented, falling back to whole-plate OCR",
+    "[2025-11-02 11:43:03] Initializing EasyOCR reader (first use only)...",
+    "[2025-11-02 11:43:04] EasyOCR reader initialized successfully",
+    "[2025-11-02 11:43:04] EasyOCR result: 'LY798KH983' (conf: 47.78%)",
+    "[2025-11-02 11:43:04] Method 'easyocr': score=0.678 (conf=47.78%, len=10)",
+    "[2025-11-02 11:43:04] \u2713 Selected: easyocr with score 0.678",
+    "[2025-11-02 11:43:04] Recognized: LY798KH983",
+    "[2025-11-02 11:43:04] \nProcessing plate 2/2",
+    "[2025-11-02 11:43:04] Plate size: 80x33, upscaling by 5x",
+    "[2025-11-02 11:43:04] Running ensemble OCR (Tesseract + EasyOCR)...",
+    "[2025-11-02 11:43:04] Character segmentation: found 0 candidates",
+    "[2025-11-02 11:43:04] WARNING: Unusual character count: 0",
+    "[2025-11-02 11:43:04] No characters segmented, falling back to whole-plate OCR",
+    "[2025-11-02 11:43:04] EasyOCR result: 'C3274HB' (conf: 7.31%)",
+    "[2025-11-02 11:43:04] Method 'easyocr': score=0.373 (conf=7.31%, len=7)",
+    "[2025-11-02 11:43:04] \u2713 Selected: easyocr with score 0.373",
+    "[2025-11-02 11:43:04] Recognized: C3274HB",
+    "[2025-11-02 11:43:04] Processing completed in 1.50s",
+    "[2025-11-02 11:43:04] \n============================================================",
+    "[2025-11-02 11:43:04] Processing: Russia close.jpg",
+    "[2025-11-02 11:43:04] ============================================================",
+    "[2025-11-02 11:43:04] Loading image: Russia close.jpg",
+    "[2025-11-02 11:43:04] Detecting plates with params: {'scaleFactor': 1.05, 'minNeighbors': 5, 'minSize': (40, 12)}",
+    "[2025-11-02 11:43:04] Initial detections: 1",
+    "[2025-11-02 11:43:04] Color check passed: bright=0.48, low_sat=0.91",
+    "[2025-11-02 11:43:04] Detection 1 ACCEPTED: bbox=[296,266,184,62], aspect=2.97",
+    "[2025-11-02 11:43:04] Valid detections after filtering: 1",
+    "[2025-11-02 11:43:04] \nProcessing plate 1/1",
+    "[2025-11-02 11:43:04] Plate size: 194x72, upscaling by 4x",
+    "[2025-11-02 11:43:04] Running ensemble OCR (Tesseract + EasyOCR)...",
+    "[2025-11-02 11:43:04] Character segmentation: found 1 candidates",
+    "[2025-11-02 11:43:04] WARNING: Unusual character count: 1",
+    "[2025-11-02 11:43:04] Segmented OCR result: '' (avg conf: 0.00%)",
+    "[2025-11-02 11:43:04] EasyOCR result: 'POOAAM' (conf: 83.12%)",
+    "[2025-11-02 11:43:04] Method 'easyocr': score=1.131 (conf=83.12%, len=6)",
+    "[2025-11-02 11:43:04] \u2713 Selected: easyocr with score 1.131",
+    "[2025-11-02 11:43:04] Recognized: POOAAM",
+    "[2025-11-02 11:43:04] Processing completed in 0.10s"
+  ]
+}
