@@ -1,5 +1,9 @@
 # Russian License Plate Detection and Recognition
 
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![OpenCV](https://img.shields.io/badge/OpenCV-4.5+-green.svg)](https://opencv.org/)
+
 ## Project Overview
 
 This project implements an automated system for detecting and recognizing Russian license plates in images using computer vision techniques, cascade classifiers, and OCR (Optical Character Recognition).
